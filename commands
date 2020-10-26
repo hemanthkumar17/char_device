@@ -1,0 +1,16 @@
+//makefile
+make -C /lib/modules/$(uname -r)/build M=$PWD modules 
+//insert module
+sudo insmod filename.ko
+//list modules
+lsmod
+//check device major and minor num
+cat /proc/devices
+//make node with device major num 240 and minor num 0
+sudo mknod -m 666 /dev/device_name c 240 0
+//check node
+ls -l /dev/device_name
+//print kernal messages
+dmesg
+//remove mod
+sudo rmmod filename.ko
