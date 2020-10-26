@@ -20,7 +20,7 @@ int open_file(struct inode *pinode, struct file *pfile)
 ssize_t read_file(struct file *pfile,char __user *buffer,size_t length,loff_t *offset)
 {
 	printk(KERN_ALERT "Inside the %s function\n",__FUNCTION__);
-	copy_to_user(buffer,encrypted_message,length);
+	copy_to_user(buffer,decrypted_message,length);
         return 0;
 }
 
