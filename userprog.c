@@ -5,17 +5,15 @@
 
 int main ()
 {
-	char buffer[3];
-	char ibuffer[3];
-	int fd;
+	char buffer[10];
+	int n,fd;
+	printf("Enter message length\n");
+	scanf("%d",&n);
 	fd=open ("/dev/simple_char_device",O_RDWR);
-	//printf("%d",fd);
-	buffer[0]='a';
-	buffer[1]='b';
-	buffer[2]='c';
-	write(fd,buffer,3);
-	read(fd,ibuffer,3);
-	printf("%s",ibuffer);
-	//printf("Value : 0x %02x\n",buffer[0]);
+	printf("Enter message");
+	scanf("%s",buffer);
+	write(fd,buffer,n);
+	read(fd,buffer,n);
+	printf("%s",buffer);
 	close(fd);
 }
