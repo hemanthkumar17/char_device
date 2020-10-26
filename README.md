@@ -7,7 +7,7 @@ Encodes and decodes for Caeser cipher, having a shift key of 3
 sudo make remove && sudo make install #to compile and install the mods and devices
 sudo make test 			      #to compile and run the test program
 ```
-## MAKEFILE: 
+## Makefile: 
 ```
 obj-m := char_device_encoder.o #Encoder file for make
 obj-m += char_device_decoder.o #Decoder file for make
