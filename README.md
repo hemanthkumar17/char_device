@@ -3,11 +3,11 @@
 Encodes and decodes for Caeser cipher, having a shift key of 3
 
 ## Commands to run : 
-sudo make remove && sudo make install #to compile and install the mods and devices
-sudo make test 			      #to compile and run the test program
+```sudo make remove && sudo make install #to compile and install the mods and devices```
+```sudo make test 			      #to compile and run the test program```
 
 ## MAKEFILE: 
-
+```
 obj-m := char_device_encoder.o #Encoder file for make
 obj-m += char_device_decoder.o #Decoder file for make
 all:
@@ -32,7 +32,7 @@ remove:
 	test -n "$(shell grep -e "^dec_device" /proc/modules)" && rmmod dec_device.ko || echo "removed" #Check if module is already loaded, if so unload it, echo removed
 	rm /dev/enc_device 2> /dev/null || echo "removed" #Check if device already exists, if so remove, echo removed
 	rm /dev/dec_device 2> /dev/null || echo "removed" #Check if device already exists, if so remove, echo removed
-
+```
 ## TEAM MEMBERS:
 ##### Hemanth Kumar J
 ##### Umar Farooq
