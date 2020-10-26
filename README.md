@@ -3,9 +3,10 @@
 Encodes and decodes for Caeser cipher, having a shift key of 3
 
 ## Commands to run : 
-```sudo make remove && sudo make install #to compile and install the mods and devices
-sudo make test 			      #to compile and run the test program```
-
+```
+sudo make remove && sudo make install #to compile and install the mods and devices
+sudo make test 			      #to compile and run the test program
+```
 ## MAKEFILE: 
 ```
 obj-m := char_device_encoder.o #Encoder file for make
