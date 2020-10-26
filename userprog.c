@@ -9,11 +9,16 @@ int main ()
 	int n,fd;
 	printf("Enter message length: ");
 	scanf("%d",&n);
-	fd=open ("/dev/simple_char_device",O_RDWR);
+	fd=open ("/dev/simple_char_device_enc",O_RDWR);
 	printf("Enter message : ");
 	scanf("%s",buffer);
 	write(fd,buffer,n);
 	read(fd,buffer,n);
-	printf("%s\n",buffer);
+	printf("The encoded message is \"%s\"\n",buffer);
 	close(fd);
+	fd=open ("/dev/simple_char_device_dec",O_RDWR);
+        write(fd,buffer,n);
+        read(fd,buffer,n);
+        printf("The decoded message is \"%s\"\n",buffer);
+        close(fd);
 }

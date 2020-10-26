@@ -70,13 +70,13 @@ struct file_operations file_ops = {
 int char_module_init(void)
 {
 	printk(KERN_ALERT "Inside the %s function\n",__FUNCTION__);
-	register_chrdev(240,"Char Drive",&file_ops);
+	register_chrdev(239,"Char Drive",&file_ops);
 	return 0;
 }
 void char_module_exit(void)
 {
 	printk(KERN_ALERT "Inside the %s function\n",__FUNCTION__);
-	unregister_chrdev(240,"Char Drive");
+	unregister_chrdev(239,"Char Drive");
 }
 
 module_init(char_module_init);
