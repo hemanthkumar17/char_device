@@ -4,6 +4,8 @@ Encodes and decodes for Caeser cipher, having a shift key of 3
 
 ## Commands to run : 
 ```
+sudo apt-get update
+sudo apt-get install linux-headers-$(uname -r)
 sudo make remove && sudo make install #to compile and install the mods and devices
 sudo make test 			      #to compile and run the test program
 ```
